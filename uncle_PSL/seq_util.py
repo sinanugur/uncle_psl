@@ -7,6 +7,7 @@
 # (c) 2016 Oxford Nanopore Technologies Ltd.
 
 import sys
+from functools import reduce
 
 # Reverse complements of bases, taken from dragonet:
 comp = {
