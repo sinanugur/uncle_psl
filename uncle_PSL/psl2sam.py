@@ -66,7 +66,7 @@ def _generate_cigar(qStart, blockSizes, qStarts, tStarts, blockCount, qSize, qEn
     bs = blockSizes[0]
     qs = qStarts[0]
     ts = tStarts[0]
-    for i in xrange(1, blockCount):  # process block by block, start from 2nd block
+    for i in range(1, blockCount):  # process block by block, start from 2nd block
         # Gap between query blocks:
         insertion = qStarts[i] - qStarts[i - 1] - bs
         # Gap between target blocks:
@@ -113,7 +113,7 @@ def _extract_segment_info(psl, qSize, tSize):
         blockSizes = blockSizes[::-1]
         qStarts = qStarts[::-1]
         tStarts = tStarts[::-1]
-        for i in xrange(blockCount):
+        for i in range(blockCount):
             qStarts[i] = qSize - blockSizes[i] - qStarts[i]
             tStarts[i] = tSize - blockSizes[i] - tStarts[i]
 
