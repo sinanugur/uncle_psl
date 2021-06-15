@@ -73,7 +73,7 @@ class SamWriter:
         :returns: None
         :rtype: object
         """
-        self.out_handler.write("{}\n".format("\t".join(map(lambda x: str(x), record.items()))))
+        self.out_handler.write("{}\n".format("\t".join(map(lambda x: str(x), record.values()))))
 
     def close(self):
         """Close SAM file.
